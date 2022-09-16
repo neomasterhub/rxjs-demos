@@ -1,14 +1,60 @@
+/* #region reset */
 body {
     background-color: #333;
     color: aliceblue;
 }
-main {
-    padding: 15px;
+
+header {
+    background-color: azure;
 }
+
+nav {
+    padding: 15px;
+
+}
+
+main {
+    margin: 0 auto;
+    padding: 15px;
+    max-width: 700px;
+}
+
 h2 {
     color: azure;
+    border-bottom: 1px rgb(100, 100, 100) solid;
+    margin-bottom: 45px;
 }
+
+a {
+    color: #476ca3;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #6994d4;
+    transition: color 0.3s;
+}
+
 button {
     border: none;
     border-radius: 3px;
+}
+
+/* #endregion */
+
+.block-container>* {
+    display: block;
+}
+
+.block-container>a {
+    line-height: 13px;
+    font-size: 10pt;
+}
+
+.desc {
+    margin: 15px 0;
+    padding: 20px;
+    width: fit-content;
+    border-radius: 7px;
+    background-color: rgb(80, 80, 80);
 }

@@ -1,13 +1,15 @@
-<nav class="container-fluid">
-  <div class="row">
-    <div class="col-auto">
-      <a routerLink="/">Home</a>
+<header>
+  <nav class="container">
+    <div class="row">
+      <div class="col-auto">
+        <a routerLink="/">Home</a>
+      </div>
+      <div class="col-auto block-container" *ngFor="let link of links">
+        <a [routerLink]="link.path">{{link.title}}</a>
+      </div>
     </div>
-    <div class="col-auto" *ngFor="let link of links">
-      <a [routerLink]="link.path">{{link.title}}</a>
-    </div>
-  </div>
-</nav>
+  </nav>
+</header>
 <main>
   <router-outlet></router-outlet>
 </main>
