@@ -8,3 +8,7 @@ main {
 h2 {
     color: azure;
 }
+button {
+    border: none;
+    border-radius: 3px;
+}
