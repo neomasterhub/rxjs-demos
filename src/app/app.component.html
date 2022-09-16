@@ -5,7 +5,7 @@
         <a routerLink="/">Home</a>
       </div>
       <div class="col-auto block-container" *ngFor="let link of links">
-        <a [routerLink]="link.path" [routerLinkActive]="'current'">{{link.title}}</a>
+        <a [routerLink]="link.path" routerLinkActive='current'>{{link.title}}</a>
       </div>
     </div>
   </nav>
