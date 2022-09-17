@@ -12,9 +12,9 @@ export class Intro1Component implements OnInit {
   sub?: Subscription;
 
   constructor() {
-    this.obs = new Observable(function subscribe(subscriber) {
+    this.obs = new Observable(function observe(observer) {
       let i = 1;
-      setInterval(() => subscriber.next(`msg ${i++}`), 500);
+      setInterval(() => observer.next(`msg ${i++}`), 500);
     });
   }
 
