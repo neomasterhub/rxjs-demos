@@ -40,6 +40,10 @@ button {
     border-radius: 3px;
 }
 
+code {
+    color: aqua;
+}
+
 /* #endregion */
 
 .block-container>* {
@@ -61,4 +65,8 @@ button {
     width: fit-content;
     border-radius: 7px;
     background-color: rgb(80, 80, 80);
+}
+
+.danger-bg {
+    background-color: firebrick;
 }

@@ -1,0 +1,36 @@
+<h2>{{title.getTitle()}}</h2>
+<div>
+    <button (click)="moveToSubs1()" [disabled]="nofSub === 1" class="me-2">Move to subs1</button>
+    <button (click)="moveToSubs2()" [disabled]="nofSub === 2">Move to subs2</button>
+</div>
+<div class="mt-2">
+    <button (click)="unsubscribeSubs1()" [disabled]="!!subs1.closed" class="danger-bg me-2">Unsubscribe subs1</button>
+    <button (click)="unsubscribeSubs2()" [disabled]="!!subs2.closed" class="danger-bg">Unsubscribe subs2</button>
+</div>
+<div class="mt-2">
+    <button (click)="outputSubs()">Output subs</button>
+</div>
+<div class="desc">
+    <div>См. консоль (F12)</div>
+    <hr>
+    <div>
+        <b>Пример</b>
+    </div>
+    <ol>
+        <li>Если нажать "Unsubscribe subs<code>N</code>", когда подписка в другой группе, ничего не произойдет.</li>
+        <li>Если нажать "Unsubscribe subs<code>N</code>" и передать в эту группу подписку, эта подписка завершится.</li>
+    </ol>
+    <div>
+        <b>Особенности Subscription как группы</b>
+    </div>
+    <ol>
+        <li>Подписку можно добавить в группу методом <code>add()</code>.</li>
+        <li>Подписку можно удалить из группы методом <code>remove()</code>.</li>
+        <li>С помощью методов <code>add()</code> и <code>remove()</code> можно перемещать подписку между группами.</li>
+        <li>Вызов метода <code>unsubscribe()</code> у группы прекращает все добавленные в нее подписки.</li>
+        <li>При удалении подписки из группы она не прекращается.</li>
+        <li>При добавлении подписки в группу с <code>closed:false</code> она не прекращается.</li>
+        <li>При добавлении подписки в группу с <code>closed:true</code> она прекращается и принимает параметр
+            <code>closed:true</code>.</li>
+    </ol>
+</div>
