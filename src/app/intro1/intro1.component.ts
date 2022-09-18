@@ -25,6 +25,7 @@ export class Intro1Component implements OnInit {
   subscribe(): void {
     if (!this.sub) {
       this.sub = this.obs?.subscribe(msg => console.log(msg));
+      
       console.log('subscribed');
       console.log(`closed: ${this.sub?.closed}`);
     }
@@ -33,9 +34,12 @@ export class Intro1Component implements OnInit {
   unsubscribe(): void {
     if (this.sub) {
       this.sub.unsubscribe();
-      console.log(`closed: ${this.sub?.closed}`);
+      
       console.log('unsubscribed');
+      console.log(`closed: ${this.sub?.closed}`);
+      
       this.sub = undefined;
+      
       console.log('undefined');
     }
   }
