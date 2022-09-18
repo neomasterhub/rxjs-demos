@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Observable, Subscription } from 'rxjs';
 
 @Component({
@@ -14,6 +15,9 @@ export class Intro2Component implements OnInit {
   });
   subs: Subscription = new Subscription();
   subsCount = 0;
+
+  constructor(public title: Title) {
+  }
 
   addSubscription() {
     let nofSub = ++this.subsCount;

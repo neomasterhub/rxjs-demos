@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
+import { Title } from "@angular/platform-browser";
 
 @Component({
   selector: 'app-intro1',
@@ -11,7 +12,7 @@ export class Intro1Component implements OnInit {
   obs?: Observable<string>;
   sub?: Subscription;
 
-  constructor() {
+  constructor(public title: Title) {
     this.obs = new Observable(function observe(observer) {
       let i = 1;
       setInterval(() => observer.next(`msg ${i++}`), 500);
