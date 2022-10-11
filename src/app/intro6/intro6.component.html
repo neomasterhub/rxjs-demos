@@ -1,0 +1,9 @@
+<h2>{{title.getTitle()}}</h2>
+<div class="desc">
+    <div>См. консоль (F12)</div>
+    <hr>
+    <div>
+        <button (click)="unsubscribeClick()"
+            [disabled]="this.subsArr[0].closed">Unsubscribe</button>
+    </div>
+</div>
