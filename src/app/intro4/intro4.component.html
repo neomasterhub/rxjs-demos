@@ -1,0 +1,12 @@
+<h2>{{title.getTitle()}}</h2>
+<div>
+    <label>
+        <span class="me-1">Unsubscribe on destroy</span>
+        <input type="checkbox" 
+            [checked]="unsubscribeOnDestroy"
+            (change)="unsubscribeOnDestroy = !unsubscribeOnDestroy">
+    </label>
+</div>
+<div class="desc">
+    <div>См. консоль (F12)</div>
+</div>
