@@ -29,7 +29,7 @@ export class Intro5Component implements OnInit {
           if (msgIdx < 4) {
             observer.next(`sub ${nofSub}: msg ${msgIdx++}`);
           }
-          // if the component will be destroyed after msgIdx = 5
+          // if the component will be destroyed after msgIdx = 3
           // the predicate condition will never occur
           
           if (nofSub === 1) {
