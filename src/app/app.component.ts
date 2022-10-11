@@ -8,5 +8,5 @@ import { AppRoutingModule } from './app-routing.module';
 })
 export class AppComponent {
   title = 'rxjs-demos';
-  links = AppRoutingModule.routeLinks;
+  rxjsRouteLinks = AppRoutingModule.rxjsRouteLinks;
 }

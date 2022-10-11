@@ -70,3 +70,11 @@ code {
 .danger-bg {
     background-color: firebrick;
 }
+
+header .item.h {
+    border-bottom: 1px solid #6994d4;
+    text-align: center;
+    font-size: 1.5;
+    font-weight: bold;
+    color: #476ca3;
+}

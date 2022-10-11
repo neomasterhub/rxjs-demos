@@ -4,10 +4,13 @@
       <div class="col-auto">
         <a routerLink="/">Home</a>
       </div>
-      <div class="col-auto block-container">
-        <a *ngFor="let link of links"
-          [routerLink]="link.path" 
-          routerLinkActive='current'>{{link.title}}</a>
+      <div class="col-auto">
+        <div class="item h">RxJS</div>
+        <div class="block-container">
+          <a *ngFor="let link of rxjsRouteLinks"
+            [routerLink]="link.path" 
+            routerLinkActive='current'>{{link.title}}</a>
+        </div>
       </div>
     </div>
   </nav>
