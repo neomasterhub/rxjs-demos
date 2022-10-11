@@ -8,6 +8,7 @@ import { Intro3Component } from './intro3/intro3.component';
 import { Intro4Component } from './intro4/intro4.component';
 import { Intro5Component } from './intro5/intro5.component';
 import { Intro6Component } from './intro6/intro6.component';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { Intro6Component } from './intro6/intro6.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot({}, {})
   ],
   providers: [],
   bootstrap: [AppComponent]
