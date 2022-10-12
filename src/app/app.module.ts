@@ -9,6 +9,8 @@ import { Intro4Component } from './intro4/intro4.component';
 import { Intro5Component } from './intro5/intro5.component';
 import { Intro6Component } from './intro6/intro6.component';
 import { StoreModule } from '@ngrx/store';
+import { Ngrx1Component } from './ngrx1/ngrx1.component';
+import { counterReducer } from './ngrx1/ngrx1.reducer';
 
 @NgModule({
   declarations: [
@@ -18,12 +20,13 @@ import { StoreModule } from '@ngrx/store';
     Intro3Component,
     Intro4Component,
     Intro5Component,
-    Intro6Component
+    Intro6Component,
+    Ngrx1Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot({count: counterReducer})
   ],
   providers: [],
   bootstrap: [AppComponent]

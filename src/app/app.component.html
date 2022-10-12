@@ -12,6 +12,14 @@
             routerLinkActive='current'>{{link.title}}</a>
         </div>
       </div>
+      <div class="col-auto">
+        <div class="item h">NgRx</div>
+        <div class="block-container">
+          <a *ngFor="let link of ngrxRouteLinks"
+            [routerLink]="link.path" 
+            routerLinkActive='current'>{{link.title}}</a>
+        </div>
+      </div>
     </div>
   </nav>
 </header>

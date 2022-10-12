@@ -6,6 +6,7 @@ import { Intro3Component } from './intro3/intro3.component';
 import { Intro4Component } from './intro4/intro4.component';
 import { Intro5Component } from './intro5/intro5.component';
 import { Intro6Component } from './intro6/intro6.component';
+import { Ngrx1Component } from './ngrx1/ngrx1.component';
 
 const rxjsRoutes: Routes = [
   { path: 'intro-1', component: Intro1Component, title: '1. Подписка и отписка' },
@@ -16,13 +17,25 @@ const rxjsRoutes: Routes = [
   { path: 'intro-6', component: Intro6Component, title: '6. Автоматическая отписка: takeUntil()'}
 ];
 
+const ngrxRoutes: Routes = [
+  { path: 'ngrx-1', component: Ngrx1Component, title: '1. Счетчик' }
+];
+
 @NgModule({
-  imports: [RouterModule.forRoot(rxjsRoutes)],
+  imports: [RouterModule.forRoot(rxjsRoutes.concat(ngrxRoutes))],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
   static get rxjsRouteLinks() {
     return rxjsRoutes.map(r => {
+      return {
+        path: r.path,
+        title: r.title
+      }
+    });
+  }
+  static get ngrxRouteLinks() {
+    return ngrxRoutes.map(r => {
       return {
         path: r.path,
         title: r.title

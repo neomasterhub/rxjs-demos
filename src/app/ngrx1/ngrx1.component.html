@@ -1,0 +1,11 @@
+<h2>{{title.getTitle()}}</h2>
+<div class="desc">
+    <div>См. консоль (F12)</div>
+    <hr>
+    <div>
+        <button (click)="increment()" class="me-1">Increment</button>
+        <button (click)="decrement()" class="me-1">Decrement</button>
+        <button (click)="reset()">Reset Counter</button>
+    </div>
+    <div>Current Count: {{ count$ | async }}</div>
+</div>
