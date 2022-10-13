@@ -10,16 +10,16 @@
         <div class="item msg wrn">Интервалы, созданные <code>setInterval()</code>, не удаляются для демо.</div>
         <div class="block-container">
           <a *ngFor="let link of rxjsIntroRouteLinks"
-            [routerLink]="link.path"
-            routerLinkActive='current'>{{link.title}}</a>
+             [routerLink]="link.path"
+             routerLinkActive='current'>{{link.title}}</a>
         </div>
       </div>
       <div class="col-auto">
         <div class="item h">NgRx</div>
         <div class="block-container">
           <a *ngFor="let link of ngrxRouteLinks"
-            [routerLink]="link.path"
-            routerLinkActive='current'>{{link.title}}</a>
+             [routerLink]="link.path"
+             routerLinkActive='current'>{{link.title}}</a>
         </div>
       </div>
     </div>
