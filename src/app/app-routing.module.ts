@@ -9,7 +9,7 @@ import { Intro6Component } from './intro6/intro6.component';
 import { Ngrx1Component } from './ngrx1/ngrx1.component';
 import {Intro7Component} from "./intro7/intro7.component";
 
-const rxjsRoutes: Routes = [
+const rxjsIntroRoutes: Routes = [
   { path: 'intro-1', component: Intro1Component, title: '1. Подписка и отписка' },
   { path: 'intro-2', component: Intro2Component, title: '2. Группа подписок' },
   { path: 'intro-3', component: Intro3Component, title: '3. Перемещение в группу'},
@@ -24,12 +24,12 @@ const ngrxRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(rxjsRoutes.concat(ngrxRoutes))],
+  imports: [RouterModule.forRoot(rxjsIntroRoutes.concat(ngrxRoutes))],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
-  static get rxjsRouteLinks() {
-    return rxjsRoutes.map(r => {
+  static get rxjsIntroRouteLinks() {
+    return rxjsIntroRoutes.map(r => {
       return {
         path: r.path,
         title: r.title

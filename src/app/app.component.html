@@ -6,9 +6,11 @@
       </div>
       <div class="col-auto">
         <div class="item h">RxJS</div>
+        <div class="item group-h">Intro</div>
+        <div class="item msg wrn">Интервалы, созданные <code>setInterval()</code>, не удаляются явно.</div>
         <div class="block-container">
-          <a *ngFor="let link of rxjsRouteLinks"
-            [routerLink]="link.path" 
+          <a *ngFor="let link of rxjsIntroRouteLinks"
+            [routerLink]="link.path"
             routerLinkActive='current'>{{link.title}}</a>
         </div>
       </div>
@@ -16,7 +18,7 @@
         <div class="item h">NgRx</div>
         <div class="block-container">
           <a *ngFor="let link of ngrxRouteLinks"
-            [routerLink]="link.path" 
+            [routerLink]="link.path"
             routerLinkActive='current'>{{link.title}}</a>
         </div>
       </div>
