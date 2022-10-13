@@ -7,6 +7,7 @@ import { Intro4Component } from './intro4/intro4.component';
 import { Intro5Component } from './intro5/intro5.component';
 import { Intro6Component } from './intro6/intro6.component';
 import { Ngrx1Component } from './ngrx1/ngrx1.component';
+import {Intro7Component} from "./intro7/intro7.component";
 
 const rxjsRoutes: Routes = [
   { path: 'intro-1', component: Intro1Component, title: '1. Подписка и отписка' },
@@ -14,7 +15,8 @@ const rxjsRoutes: Routes = [
   { path: 'intro-3', component: Intro3Component, title: '3. Перемещение в группу'},
   { path: 'intro-4', component: Intro4Component, title: '4. Автоматическая отписка: в ngOnDestroy()'},
   { path: 'intro-5', component: Intro5Component, title: '5. Автоматическая отписка: takeWhile()'},
-  { path: 'intro-6', component: Intro6Component, title: '6. Автоматическая отписка: takeUntil()'}
+  { path: 'intro-6', component: Intro6Component, title: '6. Автоматическая отписка: takeUntil()'},
+  { path: 'intro-7', component: Intro7Component, title: '7. Автоматическая отписка: AsyncPipe'}
 ];
 
 const ngrxRoutes: Routes = [
