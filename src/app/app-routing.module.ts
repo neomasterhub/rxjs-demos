@@ -9,6 +9,7 @@ import { Intro6Component } from './intro6/intro6.component';
 import { Ngrx1Component } from './ngrx1/ngrx1.component';
 import {Intro7Component} from "./intro7/intro7.component";
 import {Intro8Component} from "./intro8/intro8.component";
+import {Ngrx2Component} from "./ngrx2/ngrx2.component";
 
 const rxjsIntroRoutes: Routes = [
   { path: 'intro-1', component: Intro1Component, title: '1. Подписка и отписка' },
@@ -22,7 +23,8 @@ const rxjsIntroRoutes: Routes = [
 ];
 
 const ngrxRoutes: Routes = [
-  { path: 'ngrx-1', component: Ngrx1Component, title: '1. Счетчик' }
+  { path: 'ngrx-1', component: Ngrx1Component, title: '1. Action-Reducer-Store (счетчик)' },
+  { path: 'ngrx-2', component: Ngrx2Component, title: '2. Action.props (text to upper)' }
 ];
 
 @NgModule({
