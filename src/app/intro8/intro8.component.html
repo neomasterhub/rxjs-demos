@@ -1,0 +1,12 @@
+<h2>{{title.getTitle()}}</h2>
+
+<div class="desc">
+  <div>См. консоль (F12)</div>
+  <hr>
+  <div>
+    <ul>
+      <li *ngFor="let obs of obsArr; let i = index">obs{{i + 1}}: {{obs | async}}</li>
+    </ul>
+    <div>Teardown-функция для obs1 будет выполнена при уничтожении компонента.</div>
+  </div>
+</div>

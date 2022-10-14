@@ -12,6 +12,7 @@ import { Intro7Component } from './intro7/intro7.component';
 import { StoreModule } from '@ngrx/store';
 import { Ngrx1Component } from './ngrx1/ngrx1.component';
 import { counterReducer } from './ngrx1/ngrx1.reducer';
+import { Intro8Component } from './intro8/intro8.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { counterReducer } from './ngrx1/ngrx1.reducer';
     Intro5Component,
     Intro6Component,
     Ngrx1Component,
-    Intro7Component
+    Intro7Component,
+    Intro8Component
   ],
   imports: [
     BrowserModule,
