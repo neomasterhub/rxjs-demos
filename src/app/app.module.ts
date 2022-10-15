@@ -15,6 +15,8 @@ import {counterReducer} from './ngrx1/ngrx1.reducer';
 import {Intro8Component} from './intro8/intro8.component';
 import {Ngrx2Component} from './ngrx2/ngrx2.component';
 import {upperReducer} from "./ngrx2/ngrx2.reducer";
+import {Ngrx3Component} from "./ngrx3/ngrx3.component";
+import {booksReducer} from "./ngrx3/store/reducer";
 
 @NgModule({
   declarations: [
@@ -28,14 +30,16 @@ import {upperReducer} from "./ngrx2/ngrx2.reducer";
     Ngrx1Component,
     Intro7Component,
     Intro8Component,
-    Ngrx2Component
+    Ngrx2Component,
+    Ngrx3Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({
       count: counterReducer,
-      upper: upperReducer
+      upper: upperReducer,
+      books: booksReducer
     })
   ],
   providers: [],

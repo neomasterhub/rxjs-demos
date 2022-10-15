@@ -1,0 +1,31 @@
+<h2>{{title.getTitle()}}</h2>
+<div class="desc">
+  <div class="mb-3">
+    <b>Add a new book</b>
+  </div>
+  <div>
+    <label class="me-3">
+      <span class="me-1">Title</span>
+      <input (input)="setBookTitle($event)" [value]="book.title">
+    </label>
+    <label class="me-3">
+      <span class="me-1">Authors</span>
+      <input (input)="setBookAuthors($event)" [value]="book.authors.join(',')">
+    </label>
+    <button (click)="addBook()">Add</button>
+  </div>
+</div>
+<div class="desc">
+  <div class="mb-3">
+    <b>Remove the book</b>
+  </div>
+  <label class="me-3">
+    <span class="me-1">ID</span>
+    <input (input)="setRemovedBookId($event)">
+  </label>
+  <button (click)="removeBook()" class="danger-bg">Remove</button>
+</div>
+<code>
+  {{books$ | async}}
+</code>
+
