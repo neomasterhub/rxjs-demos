@@ -11,6 +11,7 @@ import {Intro7Component} from "./intro7/intro7.component";
 import {Intro8Component} from "./intro8/intro8.component";
 import {Ngrx2Component} from "./ngrx2/ngrx2.component";
 import {Ngrx3Component} from "./ngrx3/ngrx3.component";
+import {Ngrx4Component} from "./ngrx4/ngrx4.component";
 
 const rxjsIntroRoutes: Routes = [
   { path: 'intro-1', component: Intro1Component, title: '1. Подписка и отписка' },
@@ -26,7 +27,8 @@ const rxjsIntroRoutes: Routes = [
 const ngrxRoutes: Routes = [
   { path: 'ngrx-1', component: Ngrx1Component, title: '1. Action-Reducer-Store (счетчик)' },
   { path: 'ngrx-2', component: Ngrx2Component, title: '2. Action.props (text to upper)' },
-  { path: 'ngrx-3', component: Ngrx3Component, title: '3. Action.props (books)'}
+  { path: 'ngrx-3', component: Ngrx3Component, title: '3. Action.props (books)'},
+  { path: 'ngrx-4', component: Ngrx4Component, title: '4. Selector (books)'}
 ];
 
 @NgModule({

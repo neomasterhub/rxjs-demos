@@ -17,6 +17,7 @@ import {Ngrx2Component} from './ngrx2/ngrx2.component';
 import {upperReducer} from "./ngrx2/ngrx2.reducer";
 import {Ngrx3Component} from "./ngrx3/ngrx3.component";
 import {booksReducer} from "./ngrx3/store/reducer";
+import { Ngrx4Component } from './ngrx4/ngrx4.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {booksReducer} from "./ngrx3/store/reducer";
     Intro7Component,
     Intro8Component,
     Ngrx2Component,
-    Ngrx3Component
+    Ngrx3Component,
+    Ngrx4Component
   ],
   imports: [
     BrowserModule,
