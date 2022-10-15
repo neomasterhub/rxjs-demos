@@ -14,3 +14,5 @@ export const remove = createAction(
     id: string
   }>()
 );
+
+export const clear = createAction('[Books] Clear');

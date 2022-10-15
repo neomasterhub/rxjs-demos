@@ -3,7 +3,7 @@ import {map, Observable} from "rxjs";
 import {Title} from "@angular/platform-browser";
 import {Store} from "@ngrx/store";
 import {booksFeatureSelector, booksViewSelector} from "./ngrx4.selectors";
-import {add, remove} from "../ngrx3/store/actions";
+import {add, clear, remove} from "../ngrx3/store/actions";
 
 @Component({
   selector: 'app-ngrx4',
@@ -35,6 +35,10 @@ export class Ngrx4Component implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  ngOnDestroy(): void {
+    this.store.dispatch(clear());
   }
 
 }

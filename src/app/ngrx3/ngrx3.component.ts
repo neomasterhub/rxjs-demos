@@ -3,7 +3,7 @@ import {Title} from "@angular/platform-browser";
 import {Store} from "@ngrx/store";
 import {IBook} from "./store/model";
 import {map, Observable} from "rxjs";
-import {add, remove} from "./store/actions";
+import {add, clear, remove} from "./store/actions";
 
 @Component({
   selector: 'app-ngrx3',
@@ -52,6 +52,10 @@ export class Ngrx3Component implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  ngOnDestroy(): void {
+    this.store.dispatch(clear());
   }
 
 }
