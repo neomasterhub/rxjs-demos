@@ -17,7 +17,10 @@ import {Ngrx2Component} from './ngrx2/ngrx2.component';
 import {upperReducer} from "./ngrx2/ngrx2.reducer";
 import {Ngrx3Component} from "./ngrx3/ngrx3.component";
 import {booksReducer} from "./ngrx3/store/reducer";
-import { Ngrx4Component } from './ngrx4/ngrx4.component';
+import {Ngrx4Component} from './ngrx4/ngrx4.component';
+import {Ngrx5Component} from './ngrx5/ngrx5.component';
+import {EffectsModule} from '@ngrx/effects';
+import {BooksEffects} from "./ngrx5/ngrx5.effects";
 
 @NgModule({
   declarations: [
@@ -33,7 +36,8 @@ import { Ngrx4Component } from './ngrx4/ngrx4.component';
     Intro8Component,
     Ngrx2Component,
     Ngrx3Component,
-    Ngrx4Component
+    Ngrx4Component,
+    Ngrx5Component
   ],
   imports: [
     BrowserModule,
@@ -42,7 +46,8 @@ import { Ngrx4Component } from './ngrx4/ngrx4.component';
       count: counterReducer,
       upper: upperReducer,
       books: booksReducer
-    })
+    }),
+    EffectsModule.forRoot([BooksEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]
