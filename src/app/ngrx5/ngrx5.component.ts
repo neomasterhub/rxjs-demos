@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {Title} from "@angular/platform-browser";
 import {Store} from "@ngrx/store";
 import {IBook} from "../ngrx3/store/model";
@@ -11,20 +11,17 @@ import {add} from "../ngrx3/store/actions";
   templateUrl: './ngrx5.component.html',
   styleUrls: ['./ngrx5.component.css']
 })
-export class Ngrx5Component implements OnInit {
+export class Ngrx5Component {
 
-  actions$ = this.actions.pipe(
+  bookAddAuditEventActions$ = this.actions.pipe(
     ofType('[Book Audit Event] Add'),
     map(({type, payload}) => console.log({type, payload}))
-  )
+  );
 
   constructor(
     public title: Title,
     private store: Store<{ books: ReadonlyArray<IBook> }>,
     private actions: Actions) {
-  }
-
-  ngOnInit(): void {
   }
 
   click() {
